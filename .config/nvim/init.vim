@@ -29,3 +29,6 @@ colorscheme solarized
 
 " transparent background
 hi Normal guibg=NONE ctermbg=NONE
+
+set ignorecase
+set smartcase
