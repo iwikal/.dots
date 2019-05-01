@@ -1,0 +1,15 @@
+background-color=#002b36ee
+text-color=#6c71c4
+border-color=#6c71c4
+border-size=2
+max-icon-size=32
+progress-color=source #073642
+
+[urgency="low"]
+border-color=#073642
+text-color=#586e75
+
+[urgency="high"]
+background-color=#cb4b16ee
+border-color=#cb4b16ee
+text-color=#fdf6e3
