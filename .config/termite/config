@@ -1,5 +1,5 @@
 [options]
-font = Monospace 9
+font = Monospace 10
 mouse_autohide = true
 scrollback_lines = 10000
 
