@@ -16,6 +16,7 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('frankier/neovim-colors-solarized-truecolor-only')
   call dein#add('neoclide/coc.nvim', {'build': './install.sh nightly'})
+  call dein#add('sheerun/vim-polyglot')
 
   call dein#end()
   call dein#save_state()
