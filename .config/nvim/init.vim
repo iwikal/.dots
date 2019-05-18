@@ -36,6 +36,7 @@ set ignorecase
 set smartcase
 
 let mapleader = " "
+nnoremap Ä :
 
 " if hidden is not set, TextEdit might fail.
 set hidden
