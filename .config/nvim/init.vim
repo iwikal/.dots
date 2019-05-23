@@ -40,7 +40,10 @@ set shiftwidth=2
 set softtabstop=2
 
 let mapleader = " "
+
 nnoremap Ä :
+nnoremap <silent> <leader>sc :noh<cr>
+nmap <leader>w <C-w>
 
 " if hidden is not set, TextEdit might fail.
 set hidden
