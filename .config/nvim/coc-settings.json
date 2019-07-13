@@ -1,3 +1,4 @@
 {
-  "coc.preferences.hoverTarget": "float"
+  "coc.preferences.hoverTarget": "float",
+  "rust-client.revealOutputChannelOn": "info"
 }
