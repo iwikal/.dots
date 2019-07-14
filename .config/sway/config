@@ -4,8 +4,9 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-input 9494:87:Cooler_Master_Technology_Inc._MasterKeys_S xkb_layout dvorak
-input 9494:87:Cooler_Master_Technology_Inc._MasterKeys_S xkb_options caps:escape
+input type:keyboard xkb_layout se
+input type:keyboard xkb_variant us_dvorak
+input type:keyboard xkb_options caps:escape
 
 ### Variables
 #
