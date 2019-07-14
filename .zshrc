@@ -8,6 +8,8 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/iwikal/.zshrc'
 
+fpath=($fpath "/home/iwikal/.zfunctions")
+
 autoload -Uz compinit promptinit
 compinit
 promptinit
