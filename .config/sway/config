@@ -75,7 +75,7 @@ bindsym $mod+l exec 'swaylock -f -c 000000'
     bindsym $mod+Return exec $term
 
     # kill focused window
-    bindsym $mod+Shift+comma kill
+    bindsym $mod+Shift+aring kill
 
     # start your launcher
     bindsym $mod+e exec "rofi -show combi -combi-modi window,drun -modi combi,run,ssh"
