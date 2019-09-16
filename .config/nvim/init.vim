@@ -59,6 +59,8 @@ nnoremap Ä :
 nnoremap <silent> <leader>sc :noh<cr>
 nmap <leader>w <C-w>
 
+nnoremap Q gq
+
 " if hidden is not set, TextEdit might fail.
 set hidden
 
