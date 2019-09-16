@@ -77,8 +77,6 @@ nmap <leader>f  <Plug>(coc-format-selected)
 
 " always show signcolumns
 set signcolumn=yes
-set number
-set relativenumber
 
 " Use `[c` and `]c` to navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
