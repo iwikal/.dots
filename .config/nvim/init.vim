@@ -6,15 +6,16 @@ let s:settings = {}
 let s:settings.cache_dir = $HOME . '/.cache'
 let s:settings.dein_dir = s:settings.cache_dir . '/dein'
 let s:settings.dein_repo_dir = s:settings.dein_dir . '/repos/github.com/Shougo/dein.vim'
+let s:settings.dein_installed = 1
 
 " Add the dein installation directory into runtimepath
-let &runtimepath .= ',' . s:settings.dein_repo_dir
-
 if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:settings.dein_repo_dir)
-    execute '!git clone --depth 1 https://github.com/Shougo/dein.vim ' . s:settings.dein_repo_dir
-  endif
   execute 'set rtp^=' . fnamemodify(s:settings.dein_repo_dir, ':p')
+endif
+
+if !isdirectory(s:settings.dein_repo_dir)
+  execute '!git clone --depth 1 https://github.com/Shougo/dein.vim ' . s:settings.dein_repo_dir
+  let s:settings.dein_installed = 0
 endif
 
 if dein#load_state('~/.cache/dein')
@@ -34,6 +35,10 @@ if dein#load_state('~/.cache/dein')
 
   call dein#end()
   call dein#save_state()
+endif
+
+if s:settings.dein_installed == 0
+  call dein#install()
 endif
 
 filetype plugin indent on
