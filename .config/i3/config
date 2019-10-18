@@ -180,8 +180,6 @@ mode "resize" {
 bindsym $mod+p mode "resize"
 
 bar {
-    mode hide
-
     status_command i3status
 
     colors {
