@@ -1,6 +1,5 @@
 [options]
-font = Monospace 9
-font = Source Code Pro
+font = Monospace
 mouse_autohide = true
 scrollback_lines = 10000
 
