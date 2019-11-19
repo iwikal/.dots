@@ -1,0 +1,5 @@
+[core]
+	excludesfile = /home/joenor/.config/git/ignore
+[user]
+	email = e.joel.nordstrom@gmail.com
+	name = Joel Nordström
