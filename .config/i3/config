@@ -39,7 +39,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+aring kill
 
-bindsym $mod+Shift+comma exec "i3lock && sudo systemctl suspend"
+bindsym $mod+Shift+comma exec "i3lock"
 # start dmenu (a program launcher)
 # bindsym $mod+e exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -203,3 +203,6 @@ default_border pixel 2
 gaps inner 10
 gaps outer -10
 hide_edge_borders both
+
+bindsym $mod+m exec 'rn-reload'
+bindsym $mod+l exec 'screenclip'

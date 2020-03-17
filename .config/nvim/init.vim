@@ -48,6 +48,9 @@ set termguicolors
 set background=dark
 colorscheme solarized
 
+set colorcolumn=80
+set number
+
 " transparent background
 hi Normal guibg=NONE ctermbg=NONE
 

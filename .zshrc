@@ -37,8 +37,8 @@ case $TERM in
   ;;
 esac
 
-export PATH=$HOME/.cargo/bin/:$PATH
-export PATH=$HOME/.yarn/bin/:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.yarn/bin:$PATH
 
 source $HOME/.bash_aliases
 export RIPGREP_CONFIG_PATH="$HOME/.config/rg/config"
