@@ -30,6 +30,7 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('frankier/neovim-colors-solarized-truecolor-only')
   call dein#add('neoclide/coc.nvim', {'build': './install.sh nightly'})
+  call dein#add('reasonml-editor/vim-reason-plus')
   call dein#add('sheerun/vim-polyglot')
   call dein#add('tpope/vim-fugitive')
 
@@ -44,6 +45,7 @@ endif
 filetype plugin indent on
 syntax enable
 
+set guifont=Monospace:h15
 set termguicolors
 set background=dark
 colorscheme solarized
@@ -85,6 +87,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 
 " always show signcolumns
 set signcolumn=yes
+set colorcolumn=+2
 
 " Use `[c` and `]c` to navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)

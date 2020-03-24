@@ -14,7 +14,7 @@ set $down t
 set $up n
 set $right s
 # Your preferred terminal emulator
-set $term termite
+set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu "rofi -show combi -combi-modi window,drun -modi combi,run,ssh"
@@ -213,8 +213,6 @@ bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    mode hide
-
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
@@ -223,7 +221,7 @@ bar {
         statusline #93a1a1
         background #073642
         focused_workspace #6c71c4 #6c71c4 #fdf6e3
-        inactive_workspace #32323200 #32323200 #6c71c4
+        inactive_workspace #073642 #073642 #6c71c4
     }
 }
 

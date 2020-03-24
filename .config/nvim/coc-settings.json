@@ -1,5 +1,12 @@
 {
   "typescript.preferences.importModuleSpecifier": "relative",
   "coc.preferences.hoverTarget": "float",
-  "rust-client.revealOutputChannelOn": "info"
+  "rust-client.revealOutputChannelOn": "info",
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "suggest.acceptSuggestionOnCommitCharacter": true
 }
