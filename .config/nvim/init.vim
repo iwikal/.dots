@@ -50,6 +50,10 @@ if s:settings.dein_installed == 0
   call dein#install()
 endif
 
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 filetype plugin indent on
 syntax enable
 
