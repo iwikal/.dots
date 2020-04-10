@@ -22,11 +22,7 @@ if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
 
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
+  call dein#add('Chiel92/vim-autoformat')
 
   " call dein#add('HerringtonDarkholme/yats.vim')
   call dein#add('MaxMEllon/vim-jsx-pretty')
@@ -35,6 +31,7 @@ if dein#load_state('~/.cache/dein')
   " call dein#add('iwikal/typescript-vim')
   call dein#add('neoclide/coc.nvim', {'build': './install.sh nightly'})
   call dein#add('pangloss/vim-javascript')
+  call dein#add('neovim/nvim-lsp')
   call dein#add('reasonml-editor/vim-reason-plus')
   " call dein#add('sheerun/vim-polyglot')
   call dein#add('tpope/vim-commentary')
@@ -49,6 +46,13 @@ endif
 if s:settings.dein_installed == 0
   call dein#install()
 endif
+
+lua require'nvim_lsp'.rust_analyzer.setup{}
+
+" Use LSP omni-completion in Rust files
+autocmd Filetype rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
+" autocmd BufWrite * :Autoformat
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -111,7 +115,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window
+" Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
@@ -121,3 +125,12 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+"nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+"nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+"nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+"nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+"nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+"nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+"nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+"nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
