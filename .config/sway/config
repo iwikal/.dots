@@ -215,14 +215,16 @@ bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 bar {
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    # status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
 
-    colors {
-        statusline #93a1a1
-        background #073642
-        focused_workspace #6c71c4 #6c71c4 #fdf6e3
-        inactive_workspace #073642 #073642 #6c71c4
-    }
+    # colors {
+    #     statusline #93a1a1
+    #     background #073642
+    #     focused_workspace #6c71c4 #6c71c4 #fdf6e3
+    #     inactive_workspace #073642 #073642 #6c71c4
+    # }
+
+    swaybar_command waybar
 }
 
 #      class            border   background  text     indicator  child border

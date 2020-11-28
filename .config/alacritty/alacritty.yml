@@ -104,3 +104,6 @@ background_opacity: 0.99
 
 mouse:
   hide_when_typing: true
+
+key_bindings:
+  - { key: N, mods: Alt|Shift, action: SpawnNewInstance }
