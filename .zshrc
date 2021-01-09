@@ -18,9 +18,5 @@ compinit
 
 source <(starship init zsh --print-full-init)
 
-export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.yarn/bin:$PATH
-export PATH=$HOME/bin:$PATH
-
 source $HOME/.bash_aliases
 export RIPGREP_CONFIG_PATH="$HOME/.config/rg/config"
