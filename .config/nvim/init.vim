@@ -29,11 +29,12 @@ if dein#load_state('~/.cache/dein')
   call dein#add('delphinus/vim-firestore')
   call dein#add('frankier/neovim-colors-solarized-truecolor-only')
   " call dein#add('iwikal/typescript-vim')
-  call dein#add('neoclide/coc.nvim', {'build': './install.sh nightly'})
+  call dein#add('neoclide/coc.nvim', {'build': 'yarn install --frozen-lockfile'})
   call dein#add('pangloss/vim-javascript')
-  call dein#add('neovim/nvim-lsp')
+  " call dein#add('neovim/nvim-lsp')
   call dein#add('reasonml-editor/vim-reason-plus')
-  " call dein#add('sheerun/vim-polyglot')
+  call dein#add('ron-rs/ron.vim')
+  call dein#add('sheerun/vim-polyglot')
   call dein#add('tpope/vim-commentary')
   call dein#add('tpope/vim-fugitive')
   call dein#add('tpope/vim-surround')
@@ -47,12 +48,14 @@ if s:settings.dein_installed == 0
   call dein#install()
 endif
 
-lua require'nvim_lsp'.rust_analyzer.setup{}
+" lua require'nvim_lsp'.rust_analyzer.setup{}
 
 " Use LSP omni-completion in Rust files
 autocmd Filetype rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 " autocmd BufWrite * :Autoformat
+
+autocmd BufRead,BufNewFile *.scn setlocal filetype=ron
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
@@ -64,13 +67,11 @@ syntax enable
 set guifont=Monospace:h15
 set termguicolors
 set background=dark
+let g:solarized_termtrans= 1
 colorscheme solarized
 
 set colorcolumn=80
 set number
-
-" transparent background
-hi Normal guibg=NONE ctermbg=NONE
 
 set ignorecase
 set smartcase
@@ -100,6 +101,8 @@ set cmdheight=2
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+nmap <leader>rn <Plug>(coc-rename)
 
 " always show signcolumns
 set signcolumn=yes
