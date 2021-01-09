@@ -207,6 +207,8 @@ bindsym $mod+p mode "resize"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +2000"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2000"
 bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86MonBrightnessUp   exec brightnessctl s +20%
+bindsym XF86MonBrightnessDown exec brightnessctl s 10
 
 #
 # Status Bar:
