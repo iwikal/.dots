@@ -52,6 +52,10 @@ bindsym ctrl+space exec 'makoctl dismiss'
 
 ### Input configuration
 
+# Toggle ibus
+exec ibus-daemon -drx --panel /usr/lib/ibus/ibus-ui-gtk3
+bindsym $mod+backspace exec 'ibus-toggle'
+
 input type:touchpad {
   dwt enabled
   tap enabled

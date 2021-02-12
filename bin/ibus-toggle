@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+engine=$(ibus engine)
+if [ "${engine}" == "mozc-jp" ] || [ "${engine}" == "Unikey" ]
+then
+    ibus engine xkb:se:us_dvorak:swe
+else
+    ibus engine mozc-jp
+fi
+setxkbmap -option caps:escape
